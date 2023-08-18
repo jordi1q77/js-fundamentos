@@ -24,3 +24,11 @@ for (var i = 0; i < sentence.length; i++){
 }
 
 console.log(`La a aparece : ${timesRepeated} veces`);
+
+/**
+ * 
+ * i = i +1;
+ * i +=1
+ * i++
+ * Y lo mismo existe en negativo
+ */
