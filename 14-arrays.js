@@ -25,3 +25,6 @@ const part = marks.slice(3,5);//desde la pos 3 a la pos5
 
 //copiar array a otro array
 const copyOfMarks = marks.slice();
+
+//hacer referencia a un array (no usar)
+const marks1 = marks;
