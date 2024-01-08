@@ -25,3 +25,12 @@ function getKey(object, key){
     return object[key];
 }
 const dynamicName = getKey(person, 'name');
+
+// displayar propiedad y valor for ..in
+const alien = {
+    name: 'Wormuck', race: 'Cucusumusu', planet: 'Eden', weight: '259kg'
+    }
+
+    for (const prop in alien) {
+        console.log(`alien.${prop} = ${alien[prop]}`);
+      }

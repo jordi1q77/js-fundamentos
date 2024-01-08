@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const streamers3 = [
+            { name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft' }, { name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends' }, { name: 'Reven', age: 43, gameMorePlayed: 'League of Legends' }, { name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us' }
+        ];
+        function contains(streamer) {
+            const search = document.getElementById("myWord").value;
+            return streamer.name.includes(search);
+
+        }
+        function toFilterStreamers(){
+            alert("hola");
+            const streamersFilt = streamers3.filter(contains);
+            alert(streamersFilt);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="myWord" data-function="toFilterStreamers" />
+</body>
+
+</html>

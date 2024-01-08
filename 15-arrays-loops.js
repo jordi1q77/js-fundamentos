@@ -31,3 +31,25 @@ const getEvenNumber = (numbers) => {
 
 const evenNumbers = getEvenNumber([1,2,3,4,5,6]);
 console.log(`los números pares son ${evenNumbers}`);
+
+
+// for ..of
+const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
+
+for (const [value,index] of placesToTravel){
+    console.log(value);
+}
+
+
+//para borrar hay que crear un nuevo array sin esos valores// además vemos la función includes
+const param = [ 'sushi',
+'pizza', 'burger', 'potatoe', 'pasta', 'ice-cream', 'pizza', 'chicken',
+'onion rings', 'pasta', 'soda'
+];
+let noDuplicates = [];
+    for(let i = 0; i < param.length; i++){
+        
+        if (!noDuplicates.includes(param[i])){
+            noDuplicates.push(param[i]);
+        }
+    } 

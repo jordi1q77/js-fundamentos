@@ -7,3 +7,5 @@ const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 
 for (const value of placesToTravel){
     console.log(value);
 }
+
+meses.splice(2, 1);

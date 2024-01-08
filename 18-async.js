@@ -48,7 +48,8 @@ fetch().then((response) =>{
     return response.json();
 });
 // standard api
-fetch().then((response) => response.json())
+fetch()// aquí pasaremos la url
+.then((response) => response.json())
 .then((data) => {
     console.log(data);
 }

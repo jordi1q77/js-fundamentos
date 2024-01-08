@@ -16,7 +16,7 @@ var recipe =
 - ${thirdIngredient}.
 - ${fourthIngredient}.
 `;
-;
+
 console.log(recipe.toUpperCase());
 
 var dog = 'DOGO';
@@ -39,3 +39,16 @@ console.log(schoolName);
 schoolName= school.slice(4,6); //desde la 4  hasta la 6
 
 console.log(schoolName);
+
+
+
+// includes (devuelve si contiene ese parte de string)
+
+const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 
+'Gorra de gansta', 'Camiseta de Basket', 'Cinrurón de Orión', 'AC/DC Camiseta']
+
+for (let i = 0; i < products.length; i++){
+    if (products[i].includes("Camiseta")){
+        console.log(products[i]);
+    }
+}

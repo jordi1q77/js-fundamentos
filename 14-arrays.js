@@ -28,3 +28,15 @@ const copyOfMarks = marks.slice();
 
 //hacer referencia a un array (no usar)
 const marks1 = marks;
+
+// para eliminar parte de un array (splice)
+meses.splice(2, 1); //Elimina a partir del elemento 2(incluido) (0, 1, 2) tantos elementos como indica el segundo parámetro
+
+// para añadir un elemento splice
+
+const meses = ['Enero', 'Marzo', 'Abril', 'Mayo'];
+
+meses.splice(1, 0, 'Febrero');
+console.log(meses);
+
+// Resultado -> ["Enero", "Febrero", "Marzo", "Abril", "Mayo"]
