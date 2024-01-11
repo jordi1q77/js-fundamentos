@@ -1,11 +1,12 @@
-/*
-Probando For...of: Usa un bucle forof para recorrer todos los destinos del array. 
-Imprime en un console.log sus valores. Puedes usar este array: */
+/* 
+Probando For...in: Usa un for...in para imprimir por consola los
+ datos del alienígena.. Puedes usar este objeto:
+*/
 
-const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
+const alien = {
+    name: 'Wormuck', race: 'Cucusumusu', planet: 'Eden', weight: '259kg'
+    }
 
-for (const value of placesToTravel){
-    console.log(value);
-}
-
-meses.splice(2, 1);
+    for (const prop in alien) {
+        console.log(`alien.${prop} = ${alien[prop]}`);
+      }

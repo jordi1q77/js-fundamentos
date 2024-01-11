@@ -1,13 +1,9 @@
-/* 
-Usa includes: Haz un bucle y muestra por consola todos aquellos valores del array que 
-incluyan la palabra "Camiseta". 
-Usa la función .includes de javascript.*/
+/*
+Probando For...of: Usa un bucle forof para recorrer todos los destinos del array. 
+Imprime en un console.log sus valores. Puedes usar este array: */
 
-const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 
-'Gorra de gansta', 'Camiseta de Basket', 'Cinrurón de Orión', 'AC/DC Camiseta']
+const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
 
-for (let i = 0; i < products.length; i++){
-    if (products[i].includes("Camiseta")){
-        console.log(products[i]);
-    }
+for (const place of placesToTravel){
+    console.log(place);
 }

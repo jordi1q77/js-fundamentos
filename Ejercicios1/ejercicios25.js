@@ -15,8 +15,8 @@ const products = [
 
   let sum = 0;
 
-for (let i = 0; i < products.length; i++){
-    sum = sum + products[i].sellCount;
+  for (const product of products){
+    sum += product.sellCount;
 }
 
 console.log(sum/products.length);

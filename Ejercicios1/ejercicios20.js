@@ -1,27 +1,21 @@
 /**
- * Mixed For...of e includes: Usa un bucle for...of para recorrer todos los juguetes y 
- * elimina los que incluyan la palabra gato. 
- * Recuerda que puedes usar la función .includes() para comprobarlo.Puedes usar este array:
+ * For...of avanzado: Usa un bucle for...of para recorrer todos los 
+ * juguetes y añade los que tengan más de 15 ventas (sellCount) 
+ * al array popularToys. Imprimelo por consola.. Puedes usar este array:
  */
-
+const popularToys = []; 
 const toys = [
-    {id: 5, name: 'Buzz MyYear'},
-    {id: 11, name: 'Action Woman'},
-    {id: 23, name: 'Barbie Man'},
-    {id: 40, name: 'El gato con Guantes'}, 
-    {id: 40, name: 'El gato felix'}
+    {id: 5, name: 'Buzz MyYear', sellCount: 10},
+    {id: 11, name: 'Action Woman', sellCount: 24},
+    {id: 23, name: 'Barbie Man', sellCount: 15},
+    {id: 40, name: 'El gato con Guantes', sellCount: 8}, {id: 40, name: 'El gato felix', sellCount: 35}
     ];
-const toysNoCat = [];
-   
-    for (let [i,value] of toys.entries()){
-        console.log(i,value.name);
-        if (!value.name.includes("gato")){
-            toysNoCat.push(toys[i]);
-        }
-       /* if (value.name.includes("gato")){
-            console.log(value);
-            toys.splice(i,1); // no se puede usar el slice pq afecta al índice y se rompe el bucle
-        }*/
-        
-    }    
-    console.log(toysNoCat);
+
+for (const toy of toys){
+    
+    if (toy.sellCount > 15){
+        popularToys.push(toy);
+    }
+    
+}    
+console.log(popularToys);

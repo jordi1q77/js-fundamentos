@@ -13,12 +13,11 @@ const products = [
   { name: "Varita de Voldemort", sellCount: 6 },
 ];
 
-
-for (let i = 0; i < products.length; i++){
-    if (products[i].sellCount > 20){
-        goodProducts.push(products[i]);
+for (const product of products){
+    if (product.sellCount > 20){
+        goodProducts.push(product);
     }else{
-        badProducts.push(products[i]);
+        badProducts.push(product);
     }
 }
 

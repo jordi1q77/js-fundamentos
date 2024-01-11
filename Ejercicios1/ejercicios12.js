@@ -1,20 +1,23 @@
-/*Calcular promedio de strings: Crea una función que reciba por parámetro un array y 
-cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. 
-Puedes usar este array para probar tu función:
+/*Valores únicos: Crea una función que reciba por parámetro un array y compruebe 
+si existen elementos duplicados, en caso que existan los elimina para retornar
+ un array sin los elementos duplicados. Puedes usar este array para probar tu función:
 */
 
-const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub']; 
-function averageWord(param) {
-    let aver = 0;
-    for(let i = 0; i < param.length; i++){
-        
-        if (isNaN(param[i])){
-            aver = aver + param[i].length;
-        }else {
-            aver = aver + param[i];
+const duplicates = [ 'sushi',
+'pizza', 'burger', 'potatoe', 'pasta', 'ice-cream', 'pizza', 'chicken',
+'onion rings', 'pasta', 'soda'
+];
+function removeDuplicates(param) {
+    let noDuplicates = [];
+   
+    for (const element of param){
+        if (!noDuplicates.includes(element)){
+            noDuplicates.push(element
+                );
         }
     }
-    return aver;
+    return noDuplicates;
+
 }
-const average = averageWord(mixedElements);
-console.log(average);
+
+console.log(removeDuplicates(duplicates));

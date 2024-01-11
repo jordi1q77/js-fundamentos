@@ -1,17 +1,26 @@
-//Completa la función que tomando dos números como argumento devuelva el más alto.
+/*
+Buscar la palabra más larga Completa la función que tomando un array de strings como argumento devuelva el más largo, 
+en caso de que dos strings tenga la misma longitud deberá devolver el primero.
+Puedes usar este array para probar tu función: */
 
-function max(numberOne , numberTwo) { 
-    let max = 0;
-    if (numberOne > numberTwo){
-        max = numberOne;
-    }else{
-        max = numberTwo;
+const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.']; 
+function findLongestWord(param) {
+    let greatestWord = ' ';
+    const allWords =param.slice();
+   
+    for (const word of allWords){
+        if (word.length > greatestWord.length) {
+            greatestWord = word;
+        }
+       
     }
-    return max;
+
+    return greatestWord;
 }
 
-for (let i = 0; i < 10;i++){
-    console.log(i);
-    console.log(max(i,6));
+let word = '';
 
-}
+word = findLongestWord(avengers);
+
+
+console.log(word);

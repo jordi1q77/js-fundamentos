@@ -1,22 +1,43 @@
-/*Valores únicos: Crea una función que reciba por parámetro un array y compruebe 
-si existen elementos duplicados, en caso que existan los elimina para retornar
- un array sin los elementos duplicados. Puedes usar este array para probar tu función:
+/*
+Buscador de nombres: Crea una función que reciba por parámetro un array y el valor 
+que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento, 
+en caso que existan nos devuelve un true y la posición de dicho elemento
+ y por la contra un false. Puedes usar este array para probar tu función:
 */
 
-const duplicates = [ 'sushi',
-'pizza', 'burger', 'potatoe', 'pasta', 'ice-cream', 'pizza', 'chicken',
-'onion rings', 'pasta', 'soda'
+const nameFinder = [ 'Peter',
+'Steve',
+'Tony', 'Natasha', 'Clint',
+'Logan', 'Xabier', 'Bruce', 'Peggy', 'Jessica', 'Marc'
 ];
-function removeDuplicates(param) {
-    let noDuplicates = [];
+
+
+function finderName(param, name) {
+const nameFinded = {
+        name: "",
+        exists: false,
+        index: 0,
+    
+    };
+    nameFinded.name = name;
     for(let i = 0; i < param.length; i++){
         
-        if (!noDuplicates.includes(param[i])){
-            noDuplicates.push(param[i]);
+        if (param[i] === nameFinded.name){
+            nameFinded.exists = true;
+            nameFinded.index = i;
         }
-    }
-    return noDuplicates;
 
+    }
+
+    return nameFinded;
 }
 
-console.log(removeDuplicates(duplicates));
+let nameFinded = {
+    name: "",
+    exists: false,
+    index: 0,
+
+};
+
+nameFinded = finderName(nameFinder,'Peggy');
+console.log(nameFinded);
